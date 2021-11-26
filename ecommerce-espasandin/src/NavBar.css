@@ -1,0 +1,49 @@
+.App-header {
+    justify-content: start;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.secciones ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.secciones ul li{
+    list-style-type: none;
+}
+
+.secciones ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px;
+    transition: all 0.3s;
+    font-size: .8em;
+}
+
+.secciones ul li a:hover {
+    color: rgb(99, 141, 225);
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.logo h1 {
+    font-size: 0.8em;
+    pointer-events: none;
+    
+}
