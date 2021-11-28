@@ -1,13 +1,15 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import './NavBar.css';
+import './Estilos.css';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        < NavBar />
+        < NavBar marca="Espasandin" s1="Inicio" s2="Productos" s3="Contacto"/>
       </header>
+      < ItemListContainer saludo="Soy el contenedor principal" />
     </div>
   );
 }

@@ -1,5 +1,16 @@
+.App {
+    min-height: 100vh;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #3a3e46;
+}
+
 .App-header {
     justify-content: start;
+    width: 100%;
 }
 
 .nav {
@@ -10,9 +21,13 @@
     width: 100%;
 }
 
+
+
 .secciones ul {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding: 0;
 }
 
 .secciones ul li{
@@ -34,8 +49,9 @@
 .logo {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    width: 200px;
 }
 
 .logo img {
@@ -46,4 +62,21 @@
     font-size: 0.8em;
     pointer-events: none;
     
+}
+
+.iconoCarro {
+    width: 200px;
+}
+
+.cuerpo {
+    color: #fff;
+    width: 100%;
+    /* flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.cuerpo h1 {
+    font-weight: 300;
 }
