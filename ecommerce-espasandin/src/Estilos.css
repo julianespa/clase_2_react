@@ -20,7 +20,21 @@
     align-items: center;
     width: 100%;
 }
+.contador {
+    width: 200px;
+    border: 1px solid rgba(36, 33, 33, 0.685) ;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px 2px rgba(70, 68, 68, 0.685);
+}
 
+.contador .suma {
+    width: 50%;
+}
+
+.contador .agregar{
+    width: 100%;
+}
 
 
 .secciones ul {
@@ -71,10 +85,10 @@
 .cuerpo {
     color: #fff;
     width: 100%;
-    /* flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 .cuerpo h1 {
