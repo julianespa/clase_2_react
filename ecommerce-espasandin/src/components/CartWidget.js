@@ -1,5 +1,6 @@
 import React from 'react';
 import carrito from "../carrito.png"
+import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
     const style={
@@ -7,7 +8,7 @@ const CartWidget = () => {
     }
     return (
         <div className="iconoCarro">
-            <a href="#c"> <img src={carrito} alt="carrito de compras" style={style}/> </a>
+            <Link to="/carrito"> <img src={carrito} alt="carrito de compras" style={style}/> </Link>
         </div>
     )
 }

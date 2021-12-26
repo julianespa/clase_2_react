@@ -4,6 +4,7 @@ import './Estilos.css';
 import ItemListContainer from './components/container/ItemListContainer';
 import { ItemDetailContainer } from './components/container/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Carrito from './components/Carrito';
 
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/" element={< ItemListContainer saludo="Soy el contenedor principal" />} />
           <Route exact path="/categoria/:idcate" element={< ItemListContainer saludo="Soy el contenedor principal" />} />
           <Route exact path="/detalle/:id" element={< ItemDetailContainer />} />
+          <Route exact path="/carrito" element={<Carrito/>} />
           
         </Routes>
       </div>
