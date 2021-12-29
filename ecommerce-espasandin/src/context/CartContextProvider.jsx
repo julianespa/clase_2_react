@@ -24,6 +24,16 @@ const CartContextProvider = ({children}) => {
         }
     }
 
+    const borrarItem = (item) => {
+
+        const index = cartList.findIndex(i => i.id === item.id)
+
+        cartList.splice(index,1)
+
+        setcartList([...cartList])
+
+    }
+
     const vaciarCarrito = () => {
         setcartList([])
     }
@@ -32,7 +42,8 @@ const CartContextProvider = ({children}) => {
         <CartContext.Provider value={{
             cartList,
             agregarAlCarrito,
-            vaciarCarrito
+            vaciarCarrito,
+            borrarItem
         }}>
             {children}
         </CartContext.Provider>

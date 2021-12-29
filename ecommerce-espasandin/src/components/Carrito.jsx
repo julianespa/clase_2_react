@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import CartContext from '../context/CartContext'
+import CarritoItem from './CarritoItem'
 
 const Carrito = () => {
 
@@ -7,7 +8,7 @@ const Carrito = () => {
 
     return (
         <div>
-            {cartList.map(prod => <li key={prod.id}>{prod.name}  {prod.cantidad} </li>)}
+            {cartList.map((prod) => < CarritoItem prod={prod}/> ) }
             <button onClick={vaciarCarrito}>Vaciar carrito</button>
         </div>
     )
