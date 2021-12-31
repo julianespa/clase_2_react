@@ -34,6 +34,34 @@ const CartContextProvider = ({children}) => {
 
     }
 
+    const totalCart = () => {
+
+        let count = 0
+      
+         cartList.forEach((prod)=>{
+      
+         count += prod.precio * prod.cantidad 
+      
+         })
+      
+         return count
+      
+    }
+    const totalCartItems = () => {
+
+        let count = 0
+      
+         cartList.forEach((prod)=>{
+      
+         count += prod.cantidad 
+      
+         })
+         if (count>0) {  
+             return count
+         }
+      
+    }
+
     const vaciarCarrito = () => {
         setcartList([])
     }
@@ -43,7 +71,9 @@ const CartContextProvider = ({children}) => {
             cartList,
             agregarAlCarrito,
             vaciarCarrito,
-            borrarItem
+            borrarItem,
+            totalCart,
+            totalCartItems
         }}>
             {children}
         </CartContext.Provider>

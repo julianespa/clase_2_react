@@ -7,8 +7,8 @@ const CarritoItem = ({prod}) => {
 
     console.log(prod)
     return (
-        <div>
-            <li key={prod.id}>{prod.name}  {prod.cantidad} </li>
+        <div className="carritoItem">
+            <p>Articulo:<span>{prod.name}</span>  Cantidad:<span>{prod.cantidad}</span> Subtotal: <span>${prod.cantidad * prod.precio}</span> </p>
             <button onClick={()=>{borrarItem(prod)}}>X</button>
         </div>
     )

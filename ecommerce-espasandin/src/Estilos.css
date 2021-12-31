@@ -157,3 +157,27 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.carrito {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carritoItem {
+    min-width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carritoItem p {
+    margin-right: 20px;
+}
+
+span {
+    color: #fff
+}
