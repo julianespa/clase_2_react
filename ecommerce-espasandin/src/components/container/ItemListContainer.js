@@ -1,9 +1,11 @@
 import React from 'react'
-import { getFetch } from '../helpers/Datos'
+// import { getFetch } from '../helpers/Datos'
 //import ItemCount from '../ItemCount'
 import { useState, useEffect} from 'react'
 import { ItemList } from './ItemList'
 import { useParams } from 'react-router-dom'
+
+import { collection, getFirestore, getDocs, query, where } from 'firebase/firestore'
 
 
 
@@ -16,17 +18,45 @@ const ItemListContainer = ({saludo}) => {
 
     useEffect(() => {
 
-        if (idcate) {
-            getFetch
-            .then(resp => setProductos(resp.filter(cat => cat.categoria === idcate)))
+        // if (idcate) {
+        //     getFetch
+        //     .then(resp => setProductos(resp.filter(cat => cat.categoria === idcate)))
+        //     .catch(err => console.log(err))
+        //     .finally(() => setLoading(false)) 
+        // } else {
+        //     getFetch
+        //     .then(resp => setProductos(resp))
+        //     .catch(err => console.log(err))
+        //     .finally(() => setLoading(false)) 
+        // }
+
+        // const db = getFirestore()
+
+        // const queryDb = doc(db, 'items', 'elUm47agyfo6n1Tr04Rw' )   se usa en itemDetail
+        // getDoc(queryDb)
+        // .then(resp => setProducto({ id: resp.id, ...resp.data() }))
+
+        if (idcate){
+            const db = getFirestore()
+
+            const qc = query(collection(db, 'items'), where('categoria','==',idcate))
+            getDocs(qc)
+            .then(resp => setProductos(resp.docs.map(prod => ( { id: prod.id, ...prod.data() } ))))
             .catch(err => console.log(err))
-            .finally(() => setLoading(false)) 
+            .finally(() => setLoading(false))
+
         } else {
-            getFetch
-            .then(resp => setProductos(resp))
+
+            const db = getFirestore()
+    
+            const queryCollection = collection(db, 'items')
+            getDocs(queryCollection)
+            .then(resp => setProductos( resp.docs.map(prod => ( { id: prod.id, ...prod.data() } )) ))
             .catch(err => console.log(err))
-            .finally(() => setLoading(false)) 
+            .finally(() => setLoading(false))
+
         }
+        
 
     }, [idcate])
     
