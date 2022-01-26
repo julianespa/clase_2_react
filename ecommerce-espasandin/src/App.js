@@ -18,8 +18,8 @@ function App() {
           < NavBar marca="Espasandin" s1="Inicio" s2="Remeras" s3="Camperas"/>
         </header>
         <Routes>
-          <Route exact path="/" element={< ItemListContainer saludo="Soy el contenedor principal" />} />
-          <Route exact path="/categoria/:idcate" element={< ItemListContainer saludo="Soy el contenedor principal" />} />
+          <Route exact path="/" element={< ItemListContainer />} />
+          <Route exact path="/categoria/:idcate" element={< ItemListContainer />} />
           <Route exact path="/detalle/:id" element={< ItemDetailContainer />} />
           <Route exact path="/carrito" element={<Carrito/>} />
           

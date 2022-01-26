@@ -6,14 +6,10 @@ import CartContext from '../context/CartContext';
 const CartWidget = () => {
 
     const {totalCartItems} = useContext(CartContext)
-
-    const style={
-        width:40,
-    }
     return (
         <div className="iconoCarro">
             {totalCartItems()}
-            <Link to="/carrito"> <img src={carrito} alt="carrito de compras" style={style}/> </Link>
+            <Link to="/carrito"> <img src={carrito} alt="carrito de compras" /> </Link>
         </div>
     )
 }

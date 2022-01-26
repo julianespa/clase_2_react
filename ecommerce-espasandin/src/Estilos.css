@@ -85,6 +85,9 @@
 .iconoCarro {
     width: 200px;
 }
+.iconoCarro img{
+    width: 40px;
+}
 
 .cuerpo {
     color: #fff;

@@ -18,10 +18,6 @@ const ItemCount = ({stock, onAdd}) => {
         
     }
 
-    // const agregar = () => {
-    //     console.log (`agregaste ${count} items`)
-    // }
-
     return (
         <div className="contador">
             <div>

@@ -10,15 +10,12 @@ export const ItemDetail = ({item}) => {
 
     const [goCart, setgoCart] = useState(false)
     
-    const {cartList, agregarAlCarrito} = useContext(CartContext)
+    const {agregarAlCarrito} = useContext(CartContext)
     
     const onAdd = (cantidad) => {
-        console.log(cantidad);
         setgoCart(true)
         agregarAlCarrito({...item, cantidad:cantidad})
-    }
-
-console.log(cartList)
+    }            
 
     return (
         <div className="detalleItem">
@@ -26,6 +23,7 @@ console.log(cartList)
             <div className="detalleflex">
                 <div>
                     <p>${item.precio}</p>
+                    <p>Stock: {item.stock} </p>
                     {goCart ? (<Link to="/carrito"><button className="agregar">Ir al carrito</button></Link>) : (<ItemCount stock={item.stock} onAdd={onAdd} />)}
                     
                 </div>
